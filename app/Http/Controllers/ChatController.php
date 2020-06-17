@@ -54,8 +54,10 @@ class ChatController extends Controller
             ]);
 
             broadcast(new MessageSendEvent($request->all()))->toOthers();
+            return ['status' => 'success'];
+        }else{
+            return ['status' => 'fail'];
         }
-        return ['status' => 'fail'];
     }
 
     /**
