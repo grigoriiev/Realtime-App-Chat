@@ -12,7 +12,7 @@
         <div class="col-md-4"></div>
         <div class="form-group col-md-4">
             <label for="file">File</label>
-            <input type="file" name="image" class="form-control" value="{{old('file') ?? '/uploads/'.$profile->image}}">
+            <input type="file" name="image" class="form-control" value="{{old('image') ?? $profile->image}}">
             @error('image')<p style="color:red;">{{$message}}</p> @enderror
         </div>
     </div>
